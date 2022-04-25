@@ -1,10 +1,15 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter as Router,Routes, Route } from 'react-router-dom'
+import HomePage from './pages/HomePage';
+
 
 function App() {
   return (
-    <div>
-      <p className='text-3xl font-bold underline'>Tebal dan bergaris bawah</p>
+    <div className="App">
+       <Router>
+         <Routes>
+          <Route path="/" element={<HomePage/>}/>
+         </Routes>
+       </Router>
     </div>
   );
 }
